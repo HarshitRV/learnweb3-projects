@@ -95,11 +95,11 @@ async function setMood(_mood) {
     console.log(something);
 }
 
-getMoodBtn.addEventListener("click", (e) => {
+getMoodBtn.addEventListener("click", () => {
 	getMood();
 });
 
-setMoodBtn.addEventListener("click", (e) => {
+setMoodBtn.addEventListener("click", () => {
 	if (moodInput.value.trim() === "") {
 		alert("Please enter a mood!");
 		return;

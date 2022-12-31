@@ -1,0 +1,19 @@
+{
+  "name": "whitelistdapp",
+  "version": "1.0.0",
+  "description": "whitelist dApp for your upcoming NFT Collection",
+  "main": "index.js",
+  "scripts": {
+    "dev": "env-cmd -f .env hardhat node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harshitrv",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.5"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

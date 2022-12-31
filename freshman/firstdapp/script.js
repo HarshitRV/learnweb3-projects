@@ -9,7 +9,6 @@ if (typeof window.ethereum !== "undefined") {
 }
 
 // Connect to MetaMask
-window.ethereum.enable();
 const provider = new ethers.providers.Web3Provider(
 	web3.currentProvider,
 	"goerli"

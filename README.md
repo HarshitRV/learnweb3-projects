@@ -5,4 +5,6 @@ Learn the web3 from the ground up by awesome courses offered by [LearnWeb3.io](h
 3. [nft](./freshman/nft/)
 
 ### Sophomore
-1. [whitelistdapp](./sophmore/white-list-dapp/whitelistdapp/)
+1. [Whitelist Dapp](./sophmore/white-list-dapp/)
+ - [whitelistdapp](./sophmore/white-list-dapp/whitelistdapp/)
+ - [whitelistdappfrontend](./sophmore/white-list-dapp/whitelistfrontend/)

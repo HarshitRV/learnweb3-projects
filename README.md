@@ -8,3 +8,4 @@ Learn the web3 from the ground up by awesome courses offered by [LearnWeb3.io](h
 1. [Whitelist Dapp](./sophmore/white-list-dapp/)
  - [whitelistdapp](./sophmore/white-list-dapp/whitelistdapp/)
  - [whitelistdappfrontend](./sophmore/white-list-dapp/whitelistfrontend/)
+ - [Check Deployement](https://white-listdapp.vercel.app/)

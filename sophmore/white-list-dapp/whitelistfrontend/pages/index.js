@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Web3Modal from "web3modal";
 import { providers, Contract } from "ethers";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { WHITELIST_CONTRACT_ADDRESS, abi } from "../constants";
 
 export default function Home() {
@@ -81,7 +81,7 @@ export default function Home() {
 	/**
 	 * getNumberOfWhitelisted:  gets the number of whitelisted addresses
 	 */
-	const getNumberOfWhitelisted = async () => {
+	const getNumberOfWhitelisted = useCallback(async () => {
 		try {
 			// Get the provider from web3Modal, which in our case is MetaMask
 			// No need for the Signer here, as we are only reading state from the blockchain
@@ -100,12 +100,12 @@ export default function Home() {
 		} catch (err) {
 			console.error(err);
 		}
-	};
+	}, []);
 
 	/**
 	 * checkIfAddressInWhitelist: Checks if the address is in whitelist
 	 */
-	const checkIfAddressInWhitelist = async () => {
+	const checkIfAddressInWhitelist = useCallback(async () => {
 		try {
 			// We will need the signer later to get the user's address
 			// Even though it is a read transaction, since Signers are just special kinds of Providers,
@@ -126,12 +126,12 @@ export default function Home() {
 		} catch (err) {
 			console.error(err);
 		}
-	};
+	}, []);
 
 	/*
     connectWallet: Connects the MetaMask wallet
   */
-	const connectWallet = async () => {
+	const connectWallet = useCallback(async () => {
 		try {
 			// Get the provider from web3Modal, which in our case is MetaMask
 			// When used for the first time, it prompts the user to connect their wallet
@@ -143,8 +143,7 @@ export default function Home() {
 		} catch (err) {
 			console.error(err);
 		}
-	};
-
+	}, [checkIfAddressInWhitelist, getNumberOfWhitelisted]);
 	/*
     renderButton: Returns a button based on the state of the dapp
   */
@@ -193,7 +192,7 @@ export default function Home() {
 			});
 			connectWallet();
 		}
-	}, [walletConnected]);
+	}, [walletConnected, connectWallet]);
 
 	return (
 		<div>
@@ -223,9 +222,9 @@ export default function Home() {
 					<Image
 						className={styles.image}
 						src="./crypto-devs.svg"
-            alt="crypto logo"
-            width={100}
-            height={100}
+						alt="crypto logo"
+						width={100}
+						height={100}
 					/>
 				</div>
 			</div>

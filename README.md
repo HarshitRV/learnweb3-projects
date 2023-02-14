@@ -14,3 +14,8 @@ Learn the web3 from the ground up by awesome courses offered by [LearnWeb3.io](h
  - [nftcollectiondapp](./sophmore/nftcollection/nftcollectiondapp/)
  - [nftcollectiondappfrontend](./sophmore/nftcollection/nftcollectionfrontend/)
  - [Check Deployement](https://crytodevsnft.vercel.app/)
+
+3. [ICO dApp](./sophmore/ico/)
+ - [icodapp](./sophmore/ico/icodapp/)
+ - [icofrontend](./sophmore/ico/icofrontend/)
+ - [Check Deployement](https://icodapp.vercel.app/)

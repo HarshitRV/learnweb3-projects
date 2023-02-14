@@ -18,4 +18,4 @@ Learn the web3 from the ground up by awesome courses offered by [LearnWeb3.io](h
 3. [ICO dApp](./sophmore/ico/)
  - [icodapp](./sophmore/ico/icodapp/)
  - [icofrontend](./sophmore/ico/icofrontend/)
- - [Check Deployement](https://icodapp.vercel.app/)
+ - [Check Deployement](https://icodappon.vercel.app/)
